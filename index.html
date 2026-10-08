@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midnight Sprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-label="Midnight Sprint">
+        <span class="brand-kicker">ARCADE / 01</span>
+        <h1>MIDNIGHT <em>SPRINT</em></h1>
+      </div>
+      <div class="stats" aria-label="Race statistics">
+        <div class="stat"><span>SCORE</span><strong id="score">00000</strong></div>
+        <div class="stat"><span>BEST</span><strong id="best">00000</strong></div>
+        <div class="stat"><span>SPEED</span><strong><span id="speed">01</span><small> KM/H</small></strong></div>
+      </div>
+    </header>
+
+    <section class="game-area" aria-label="Racing game">
+      <div class="skyline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="road" id="road">
+        <div class="road-edge road-edge-left"></div>
+        <div class="road-edge road-edge-right"></div>
+        <div class="lane-mark lane-mark-left"></div>
+        <div class="lane-mark lane-mark-right"></div>
+        <div class="player-car" id="playerCar" aria-label="Your car">
+          <div class="car-shadow"></div>
+          <div class="car-body"><span class="windshield"></span><span class="hood-stripe"></span><span class="headlight left"></span><span class="headlight right"></span></div>
+          <span class="wheel wheel-left"></span><span class="wheel wheel-right"></span>
+        </div>
+        <div id="trafficLayer"></div>
+        <div class="start-line" id="startLine"></div>
+      </div>
+
+      <div class="start-panel" id="startPanel">
+        <div class="panel-rule"></div>
+        <p class="eyebrow">READY TO RACE?</p>
+        <h2>Own the<br><em>night.</em></h2>
+        <p class="instructions">Switch lanes. Dodge traffic.<br>Stay on the asphalt.</p>
+        <button class="primary-button" id="startButton"><span>START ENGINE</span><b>→</b></button>
+        <p class="key-hint">USE <kbd>←</kbd> <kbd>→</kbd> OR <kbd>A</kbd> <kbd>D</kbd></p>
+      </div>
+
+      <div class="game-over-panel hidden" id="gameOverPanel">
+        <p class="eyebrow">RACE COMPLETE</p>
+        <h2>That was<br><em>close.</em></h2>
+        <div class="final-score"><span>FINAL SCORE</span><strong id="finalScore">00000</strong></div>
+        <button class="primary-button" id="restartButton"><span>RACE AGAIN</span><b>↻</b></button>
+      </div>
+
+      <div class="mobile-controls" aria-label="Touch controls">
+        <button id="leftButton" aria-label="Move left">←</button>
+        <button id="rightButton" aria-label="Move right">→</button>
+      </div>
+    </section>
+
+    <footer class="footer-note"><span class="status-dot"></span> KEEP YOUR EYES ON THE ROAD <span class="footer-line"></span> 2024 / NIGHT DRIVE DIVISION</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
